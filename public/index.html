@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+    <head>
+        <title>Kevin Chang</title>
+        <meta charset="utf-8">
+        <base href="/" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Latest compiled and minified CSS -->
+        <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/css/custom.css" rel="stylesheet">
+        
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <!-- Angular and Angular Route libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+        
+        <!-- Latest compiled JavaScript -->
+        <script src="/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/js/script.js"></script>
+
+    </head>
+
+    <body ng-controller="homeController">
+
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand">Kevin Chang</a>
+                </div>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            Projects <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#mobile">Williams Mobile</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#rasan">RASAN Call Routing</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#lathism">Lathism Website</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            Experience<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#interystems">InterSystems Software Development Intern</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#research">Undergraduate Math Research Assistant</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#ta">Computer Science Teaching Assistant</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/contact">Contact</a></li>            
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- Main content -->
+            <div id="main">
+                <!-- angular templating -->
+                <!-- this is where the content will be injected -->
+                <div ng-view></div>
+                <hr />
+                <pre>$location.path() = {{$location.path()}}</pre>
+                <pre>$route.current.templateUrl={{$route.current.templateUrl}}</pre>
+                <pre>$route.current.params={{$route.current.params}}</pre>
+                <pre>$route.current.scope.name={{$route.current.scope.name}}</pre>
+                <pre>$routeParams={{$routeParams}}</pre>
+            </div>
+
+
+        
+</body>
+
+</html>
